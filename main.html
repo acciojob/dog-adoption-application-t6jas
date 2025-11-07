@@ -1,16 +1,106 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Adoption Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #breeds option:checked {
+            background-color: #3B82F6;
+            color: white;
+        }
+        #address {
+            min-height: 100px;
+            resize: vertical;
+        }
+    </style>
 </head>
+<body class="bg-blue-50 min-h-screen flex items-center justify-center p-4">
 
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="w-full max-w-lg bg-white shadow-2xl rounded-xl p-8 md:p-10 border-t-8 border-blue-600">
+        
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-2 text-center">
+            Dog Adoption Application
+        </h1>
+        <p class="text-center text-gray-500 mb-8">Help us find the perfect match for Ritesh!</p>
+
+        <form method="POST" action="#" class="space-y-6">
+            
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Applicant Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Name"
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                >
+            </div>
+
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                <input 
+                    type="text" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="Phone Number"
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                >
+            </div>
+
+            <div>
+                <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                <textarea 
+                    id="address" 
+                    name="address" 
+                    placeholder="Address"
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                ></textarea>
+            </div>
+
+            <div class="flex items-start pt-2">
+                <input 
+                    id="checkbox" 
+                    name="checkbox" 
+                    type="checkbox" 
+                    value="Have you ever lived with a Dog before?" 
+                    class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded mt-1"
+                >
+                <label for="checkbox" class="ml-3 text-sm font-medium text-gray-700">
+                    Have you ever lived with a Dog before?
+                </label>
+            </div>
+            
+            <div>
+                <label for="breeds" class="block text-sm font-medium text-gray-700 mb-1">Please select your preferred breeds</label>
+                <select 
+                    id="breeds" 
+                    name="multiSelect" 
+                    multiple 
+                    size="5" 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 appearance-none"
+                >
+                    <option value="labrador">Labrador Retriever</option>
+                    <option value="poodle">Poodle</option>
+                    <option value="beagle">Beagle</option>
+                    <option value="shepherd">German Shepherd</option>
+                    <option value="terrier">Yorkshire Terrier</option>
+                </select>
+                <p class="text-xs text-gray-500 mt-1">Hold down Ctrl (Windows) or Command (Mac) to select multiple options.</p>
+            </div>
+            
+            <button 
+                type="submit" 
+                name="submit"
+                id="submit"
+                value="Submit"
+                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out mt-8"
+            >
+                Submit Application
+            </button>
+        </form>
+    </div>
 
 </body>
-
 </html>
